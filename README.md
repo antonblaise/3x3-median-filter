@@ -8,9 +8,15 @@ Assignment 1*</br>
  Image processing - noise reduction with 3x3 median filter</br>
  Note that this tool is only useable on Windows, and it can only produce grayscale outputs.
 
+# Requirements
+[Python 3](https://www.python.org/downloads/)</br>
+[NumPy](https://numpy.org/install/)</br>
+[Pillow](https://pypi.org/project/Pillow/)</br>
+
 # Usage guide
 - Run the following command in command prompt `cmd.exe` under your desired folder.</br>`git clone https://github.com/antonblaise/3x3-median-filter.git` 
-- Double click on the new `3x3-median-filter` folder. 
+- Double click on the new `3x3-median-filter` folder.
+- For first time usage after fresh install, `python requirements.py` before using the program. 
 - Place your input image inside the `data` folder, and rename it as `input.png`.
 - Double click `launcher.bat` to run the program.
 - The result is generated and saved in both the main directory and the `data` folder as `output.png`. 
