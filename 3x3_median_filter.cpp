@@ -1,4 +1,3 @@
-
 #include<iostream>
 #include <fstream>
 #include <vector>
@@ -6,22 +5,35 @@
 using namespace std;
 using std::ofstream;
 
-void sort_algo (int inputArray[], int arraySize)
+void bubbleSort (int inputArray[], int arraySize)
 {
-  int i, key, j;
-  for (i = 1; i < arraySize; i++)
-  {
-      key = inputArray[i];
-      j = i - 1;
-
-      while (j >= 0 && inputArray[j] > key)
-      {
-          inputArray[j + 1] = inputArray[j];
-          j = j - 1;
-      }
-      inputArray[j + 1] = key;
+  int i, j;
+  for (i = 0; i < arraySize - 1; i++ ){
+    for (j = 0; j < arraySize - i - 1; j++) {
+      if (inputArray[j] > inputArray[j + 1]) {
+        swap(inputArray[j], inputArray[j + 1]);
+      }    
+    }
   }
+}
 
+void insertionSort (int inputArray[], int arraySize)
+{
+  int i, j, key;
+
+  for (i = 1; i < arraySize; i++) {
+
+    key = inputArray[i];
+    j = i - 1;
+
+    while (j >= 0 && inputArray[j] > key) {
+        inputArray[j + 1] = inputArray[j];
+        j = j - 1;
+    }
+
+    inputArray[j + 1] = key;
+
+  }
 }
 
 #define N 2000
@@ -105,7 +117,7 @@ int main() {
   {
     for(col = 1; col <= width; col++)
     {
-      //neighbor pixel values are stored in window including this pixel
+      // Window = 3x3 matrix, centered at (row,col)
       window[0] = img_array[row-1][col-1];
       window[1] = img_array[row-1][col];
       window[2] = img_array[row-1][col+1];
@@ -116,8 +128,8 @@ int main() {
       window[7] = img_array[row+1][col];
       window[8] = img_array[row+1][col+1];
 
-      //sort window array
-      sort_algo(window,9);
+      //sort window array (pick any sorting algorithm above)
+      insertionSort(window, 9);
       v_outdata << window[4] << endl;
       m_outdata << window[4] << "\t";
     }
