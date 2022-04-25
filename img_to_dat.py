@@ -18,7 +18,7 @@ def write_dat (f, pix_val):
     f.close()
 
 # get pixel values
-print(">> Opening and processing image "+loc + fname+ " width "+str(width)+" height "+str(height))
+print(">> Opening and processing image "+loc + fname+ " width "+str(width)+", height "+str(height))
 im = Image.open(loc+fname, 'r').convert('RGB')
 pix_val = list(ImageOps.grayscale(im).getdata())
 # pix_val = list(im.getdata())
