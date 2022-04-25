@@ -16,7 +16,7 @@ for i in range(len(data)):
 data = np.array(data)
 
 newimage = Image.new('L', (width,height))
-print(f">> Opening and processing dat file {input_dat} width {width} height {height}")
+print(f">> Opening and processing dat file {input_dat} width {width}, height {height}")
 print(f">> Total number of pixels: {width*height}")
 print(f">> PNG file generated as {output_png}")
 newimage.putdata(data)
