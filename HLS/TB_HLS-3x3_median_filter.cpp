@@ -11,6 +11,8 @@ void median_filter(int window[9], int &median);
 
 int main(){
 
+#pragma HLS dataflow
+
 	cout << ">> Reading data..." << endl;
 	FILE *fin, *fdim, *fout, *fout_m;
 
@@ -30,6 +32,8 @@ int main(){
 
 	fin=fopen("input.dat","r");
 	for (int i = 0; i < width*height; i++) {
+#pragma HLS loop_flatten
+#pragma HLS unroll factor 900
 		fscanf(fin, "%d", &vec[i]);
 	}
 	fclose(fin);
@@ -43,6 +47,8 @@ int main(){
 
 	// set all elements = 0
 	for (row = 0; row < N; row++){
+#pragma HLS loop_flatten
+#pragma HLS unroll factor 900
 		for (col = 0; col < N; col++){
 			img_array[row*N + col] = 0; // equivalent to img_array[row, col]
 		}
@@ -59,6 +65,8 @@ int main(){
 
 	// // No padding
 	for (row = 0; row < height; row++){
+#pragma HLS loop_flatten
+#pragma HLS unroll factor 900
 		for (col = 0; col < width; col++){
 			img_array[row*N + col] = vec[pixel_pointer];
 			pixel_pointer++;
@@ -75,9 +83,12 @@ int main(){
 
 	for(row = 1; row <= height; row++)
 	{
-#pragma HLS unroll factor 4
+#pragma HLS loop_flatten
+#pragma HLS unroll factor 900
 		for(col = 1; col <= width; col++)
 		{
+#pragma HLS loop_flatten
+#pragma HLS unroll factor 900
 			// Window = 3x3 matrix, centered at (row,col)
 			window[0] = img_array[(row-1)*N + (col-1)];
 			window[1] = img_array[(row-1)*N + (col)];
@@ -89,7 +100,6 @@ int main(){
 			window[7] = img_array[(row+1)*N + (col)];
 			window[8] = img_array[(row+1)*N + (col+1)];
 
-#pragma HLS unroll factor 4
 			median_filter(window, median); // DUT
 			//sort window array (pick any sorting algorithm above)
 

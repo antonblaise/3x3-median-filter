@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="median_filter,hls_ip_2018_3,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=4.795000,HLS_SYN_LAT=-1,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=89,HLS_SYN_LUT=170,HLS_VERSION=2018_3}" *)
+(* CORE_GENERATION_INFO="median_filter,hls_ip_2018_3,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020clg484-1,HLS_INPUT_CLOCK=10.000000,HLS_INPUT_ARCH=others,HLS_SYN_CLOCK=6.701250,HLS_SYN_LAT=83,HLS_SYN_TPT=none,HLS_SYN_MEM=0,HLS_SYN_DSP=0,HLS_SYN_FF=366,HLS_SYN_LUT=1263,HLS_VERSION=2018_3}" *)
 
 module median_filter (
         ap_clk,
@@ -21,16 +21,19 @@ module median_filter (
         window_we0,
         window_d0,
         window_q0,
+        window_address1,
+        window_ce1,
+        window_we1,
+        window_d1,
+        window_q1,
         median,
         median_ap_vld
 );
 
-parameter    ap_ST_fsm_state1 = 6'd1;
-parameter    ap_ST_fsm_state2 = 6'd2;
-parameter    ap_ST_fsm_state3 = 6'd4;
-parameter    ap_ST_fsm_state4 = 6'd8;
-parameter    ap_ST_fsm_state5 = 6'd16;
-parameter    ap_ST_fsm_state6 = 6'd32;
+parameter    ap_ST_fsm_state1 = 4'd1;
+parameter    ap_ST_fsm_state2 = 4'd2;
+parameter    ap_ST_fsm_state3 = 4'd4;
+parameter    ap_ST_fsm_state4 = 4'd8;
 
 input   ap_clk;
 input   ap_rst;
@@ -43,6 +46,11 @@ output   window_ce0;
 output   window_we0;
 output  [31:0] window_d0;
 input  [31:0] window_q0;
+output  [3:0] window_address1;
+output   window_ce1;
+output   window_we1;
+output  [31:0] window_d1;
+input  [31:0] window_q1;
 output  [31:0] median;
 output   median_ap_vld;
 
@@ -52,41 +60,54 @@ reg ap_ready;
 reg[3:0] window_address0;
 reg window_ce0;
 reg window_we0;
-reg[31:0] window_d0;
+reg window_ce1;
+reg window_we1;
 reg median_ap_vld;
 
-(* fsm_encoding = "none" *) reg   [5:0] ap_CS_fsm;
+(* fsm_encoding = "none" *) reg   [3:0] ap_CS_fsm;
 wire    ap_CS_fsm_state1;
-wire   [4:0] i_i_cast_fu_105_p1;
-reg   [4:0] i_i_cast_reg_165;
-wire    ap_CS_fsm_state2;
-wire   [0:0] exitcond_i_fu_109_p2;
-reg   [31:0] key_reg_183;
 wire    ap_CS_fsm_state3;
-wire  signed [31:0] j_0_in_i_cast_fu_120_p1;
-reg  signed [31:0] j_0_in_i_cast_reg_189;
+wire    grp_insertionSort_fu_40_ap_start;
+wire    grp_insertionSort_fu_40_ap_done;
+wire    grp_insertionSort_fu_40_ap_idle;
+wire    grp_insertionSort_fu_40_ap_ready;
+wire   [3:0] grp_insertionSort_fu_40_inputArray_address0;
+wire    grp_insertionSort_fu_40_inputArray_ce0;
+wire    grp_insertionSort_fu_40_inputArray_we0;
+wire   [31:0] grp_insertionSort_fu_40_inputArray_d0;
+wire   [3:0] grp_insertionSort_fu_40_inputArray_address1;
+wire    grp_insertionSort_fu_40_inputArray_ce1;
+wire    grp_insertionSort_fu_40_inputArray_we1;
+wire   [31:0] grp_insertionSort_fu_40_inputArray_d1;
+reg    grp_insertionSort_fu_40_ap_start_reg;
+wire    ap_CS_fsm_state2;
 wire    ap_CS_fsm_state4;
-wire  signed [4:0] j_fu_124_p2;
-reg  signed [4:0] j_reg_194;
-wire   [0:0] tmp_1_i_fu_134_p2;
-reg   [0:0] tmp_1_i_reg_199;
-wire   [3:0] i_fu_159_p2;
-wire    ap_CS_fsm_state5;
-wire   [0:0] tmp_3_i_fu_145_p2;
-reg   [3:0] i_i_reg_83;
-reg  signed [4:0] j_0_in_i_reg_95;
-wire   [63:0] tmp_i_fu_115_p1;
-wire   [63:0] tmp_2_i_fu_140_p1;
-wire   [63:0] tmp_6_i_fu_150_p1;
-wire  signed [63:0] tmp_4_i_fu_154_p1;
-wire    ap_CS_fsm_state6;
-wire  signed [31:0] j_cast_fu_130_p1;
-reg   [5:0] ap_NS_fsm;
+reg   [3:0] ap_NS_fsm;
 
 // power-on initialization
 initial begin
-#0 ap_CS_fsm = 6'd1;
+#0 ap_CS_fsm = 4'd1;
+#0 grp_insertionSort_fu_40_ap_start_reg = 1'b0;
 end
+
+insertionSort grp_insertionSort_fu_40(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst),
+    .ap_start(grp_insertionSort_fu_40_ap_start),
+    .ap_done(grp_insertionSort_fu_40_ap_done),
+    .ap_idle(grp_insertionSort_fu_40_ap_idle),
+    .ap_ready(grp_insertionSort_fu_40_ap_ready),
+    .inputArray_address0(grp_insertionSort_fu_40_inputArray_address0),
+    .inputArray_ce0(grp_insertionSort_fu_40_inputArray_ce0),
+    .inputArray_we0(grp_insertionSort_fu_40_inputArray_we0),
+    .inputArray_d0(grp_insertionSort_fu_40_inputArray_d0),
+    .inputArray_q0(window_q0),
+    .inputArray_address1(grp_insertionSort_fu_40_inputArray_address1),
+    .inputArray_ce1(grp_insertionSort_fu_40_inputArray_ce1),
+    .inputArray_we1(grp_insertionSort_fu_40_inputArray_we1),
+    .inputArray_d1(grp_insertionSort_fu_40_inputArray_d1),
+    .inputArray_q1(window_q1)
+);
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
@@ -97,43 +118,19 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b1 == ap_CS_fsm_state5) & ((tmp_3_i_fu_145_p2 == 1'd0) | (tmp_1_i_reg_199 == 1'd0)))) begin
-        i_i_reg_83 <= i_fu_159_p2;
-    end else if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
-        i_i_reg_83 <= 4'd1;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (((tmp_3_i_fu_145_p2 == 1'd1) & (tmp_1_i_reg_199 == 1'd1) & (1'b1 == ap_CS_fsm_state5))) begin
-        j_0_in_i_reg_95 <= j_reg_194;
-    end else if ((1'b1 == ap_CS_fsm_state3)) begin
-        j_0_in_i_reg_95 <= i_i_cast_reg_165;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state2)) begin
-        i_i_cast_reg_165[3 : 0] <= i_i_cast_fu_105_p1[3 : 0];
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state4)) begin
-        j_0_in_i_cast_reg_189 <= j_0_in_i_cast_fu_120_p1;
-        j_reg_194 <= j_fu_124_p2;
-        tmp_1_i_reg_199 <= tmp_1_i_fu_134_p2;
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if ((1'b1 == ap_CS_fsm_state3)) begin
-        key_reg_183 <= window_q0;
+    if (ap_rst == 1'b1) begin
+        grp_insertionSort_fu_40_ap_start_reg <= 1'b0;
+    end else begin
+        if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
+            grp_insertionSort_fu_40_ap_start_reg <= 1'b1;
+        end else if ((grp_insertionSort_fu_40_ap_ready == 1'b1)) begin
+            grp_insertionSort_fu_40_ap_start_reg <= 1'b0;
+        end
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state6)) begin
+    if ((1'b1 == ap_CS_fsm_state4)) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -149,7 +146,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state6)) begin
+    if ((1'b1 == ap_CS_fsm_state4)) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -157,7 +154,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state6)) begin
+    if ((1'b1 == ap_CS_fsm_state4)) begin
         median_ap_vld = 1'b1;
     end else begin
         median_ap_vld = 1'b0;
@@ -165,81 +162,69 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state5) & ((tmp_3_i_fu_145_p2 == 1'd0) | (tmp_1_i_reg_199 == 1'd0)))) begin
-        window_address0 = tmp_4_i_fu_154_p1;
-    end else if (((tmp_3_i_fu_145_p2 == 1'd1) & (tmp_1_i_reg_199 == 1'd1) & (1'b1 == ap_CS_fsm_state5))) begin
-        window_address0 = tmp_6_i_fu_150_p1;
-    end else if ((1'b1 == ap_CS_fsm_state4)) begin
-        window_address0 = tmp_2_i_fu_140_p1;
-    end else if (((exitcond_i_fu_109_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
+    if ((1'b1 == ap_CS_fsm_state3)) begin
         window_address0 = 64'd4;
-    end else if (((exitcond_i_fu_109_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
-        window_address0 = tmp_i_fu_115_p1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        window_address0 = grp_insertionSort_fu_40_inputArray_address0;
     end else begin
         window_address0 = 'bx;
     end
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state4) | ((tmp_3_i_fu_145_p2 == 1'd1) & (tmp_1_i_reg_199 == 1'd1) & (1'b1 == ap_CS_fsm_state5)) | ((1'b1 == ap_CS_fsm_state5) & ((tmp_3_i_fu_145_p2 == 1'd0) | (tmp_1_i_reg_199 == 1'd0))) | ((exitcond_i_fu_109_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2)) | ((exitcond_i_fu_109_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2)))) begin
+    if ((1'b1 == ap_CS_fsm_state3)) begin
         window_ce0 = 1'b1;
+    end else if ((1'b1 == ap_CS_fsm_state2)) begin
+        window_ce0 = grp_insertionSort_fu_40_inputArray_ce0;
     end else begin
         window_ce0 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((1'b1 == ap_CS_fsm_state5)) begin
-        if (((tmp_3_i_fu_145_p2 == 1'd0) | (tmp_1_i_reg_199 == 1'd0))) begin
-            window_d0 = key_reg_183;
-        end else if (((tmp_3_i_fu_145_p2 == 1'd1) & (tmp_1_i_reg_199 == 1'd1))) begin
-            window_d0 = window_q0;
-        end else begin
-            window_d0 = 'bx;
-        end
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        window_ce1 = grp_insertionSort_fu_40_inputArray_ce1;
     end else begin
-        window_d0 = 'bx;
+        window_ce1 = 1'b0;
     end
 end
 
 always @ (*) begin
-    if ((((tmp_3_i_fu_145_p2 == 1'd1) & (tmp_1_i_reg_199 == 1'd1) & (1'b1 == ap_CS_fsm_state5)) | ((1'b1 == ap_CS_fsm_state5) & ((tmp_3_i_fu_145_p2 == 1'd0) | (tmp_1_i_reg_199 == 1'd0))))) begin
-        window_we0 = 1'b1;
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        window_we0 = grp_insertionSort_fu_40_inputArray_we0;
     end else begin
         window_we0 = 1'b0;
     end
 end
 
 always @ (*) begin
+    if ((1'b1 == ap_CS_fsm_state2)) begin
+        window_we1 = grp_insertionSort_fu_40_inputArray_we1;
+    end else begin
+        window_we1 = 1'b0;
+    end
+end
+
+always @ (*) begin
     case (ap_CS_fsm)
         ap_ST_fsm_state1 : begin
-            if (((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))) begin
+            if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
                 ap_NS_fsm = ap_ST_fsm_state2;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end
         end
         ap_ST_fsm_state2 : begin
-            if (((exitcond_i_fu_109_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
-                ap_NS_fsm = ap_ST_fsm_state6;
-            end else begin
+            if (((grp_insertionSort_fu_40_ap_done == 1'b1) & (1'b1 == ap_CS_fsm_state2))) begin
                 ap_NS_fsm = ap_ST_fsm_state3;
+            end else begin
+                ap_NS_fsm = ap_ST_fsm_state2;
             end
         end
         ap_ST_fsm_state3 : begin
             ap_NS_fsm = ap_ST_fsm_state4;
         end
         ap_ST_fsm_state4 : begin
-            ap_NS_fsm = ap_ST_fsm_state5;
-        end
-        ap_ST_fsm_state5 : begin
-            if (((1'b1 == ap_CS_fsm_state5) & ((tmp_3_i_fu_145_p2 == 1'd0) | (tmp_1_i_reg_199 == 1'd0)))) begin
-                ap_NS_fsm = ap_ST_fsm_state2;
-            end else begin
-                ap_NS_fsm = ap_ST_fsm_state4;
-            end
-        end
-        ap_ST_fsm_state6 : begin
             ap_NS_fsm = ap_ST_fsm_state1;
         end
         default : begin
@@ -256,38 +241,14 @@ assign ap_CS_fsm_state3 = ap_CS_fsm[32'd2];
 
 assign ap_CS_fsm_state4 = ap_CS_fsm[32'd3];
 
-assign ap_CS_fsm_state5 = ap_CS_fsm[32'd4];
-
-assign ap_CS_fsm_state6 = ap_CS_fsm[32'd5];
-
-assign exitcond_i_fu_109_p2 = ((i_i_reg_83 == 4'd9) ? 1'b1 : 1'b0);
-
-assign i_fu_159_p2 = (i_i_reg_83 + 4'd1);
-
-assign i_i_cast_fu_105_p1 = i_i_reg_83;
-
-assign j_0_in_i_cast_fu_120_p1 = j_0_in_i_reg_95;
-
-assign j_cast_fu_130_p1 = j_fu_124_p2;
-
-assign j_fu_124_p2 = ($signed(j_0_in_i_reg_95) + $signed(5'd31));
+assign grp_insertionSort_fu_40_ap_start = grp_insertionSort_fu_40_ap_start_reg;
 
 assign median = window_q0;
 
-assign tmp_1_i_fu_134_p2 = (($signed(j_0_in_i_reg_95) > $signed(5'd0)) ? 1'b1 : 1'b0);
+assign window_address1 = grp_insertionSort_fu_40_inputArray_address1;
 
-assign tmp_2_i_fu_140_p1 = $unsigned(j_cast_fu_130_p1);
+assign window_d0 = grp_insertionSort_fu_40_inputArray_d0;
 
-assign tmp_3_i_fu_145_p2 = (($signed(window_q0) > $signed(key_reg_183)) ? 1'b1 : 1'b0);
-
-assign tmp_4_i_fu_154_p1 = j_0_in_i_reg_95;
-
-assign tmp_6_i_fu_150_p1 = $unsigned(j_0_in_i_cast_reg_189);
-
-assign tmp_i_fu_115_p1 = i_i_reg_83;
-
-always @ (posedge ap_clk) begin
-    i_i_cast_reg_165[4] <= 1'b0;
-end
+assign window_d1 = grp_insertionSort_fu_40_inputArray_d1;
 
 endmodule //median_filter
