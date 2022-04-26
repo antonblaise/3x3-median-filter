@@ -33,4 +33,3 @@ Assignment 1*</br>
 # Major amendment on 27 April 2022
 - Switched from static to dynamic memory allocation for the huge matrices and vectors to overcome segmentation fault besides improving processing speed.
 - Eliminated the usage of `fstream` library, as it causes problems during integration with Vivado HLS.
-- Further adjustments are needed as the HLS codes are still *NOT* synthesizable in Vivado HLS.
