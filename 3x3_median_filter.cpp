@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 #include <fstream>
 #include <vector>
 
@@ -101,7 +101,7 @@ int main() {
   arrdata.close();
   cout << ">> Saved input pixels matrix as img_array.dat" << endl;
 
-  // median filter
+  // 3x3 median filter main algorithm
   int window[9];
   cout << ">> Performing 3x3 median filter, please wait..." << endl;
 
