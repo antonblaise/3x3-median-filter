@@ -1,7 +1,7 @@
 import numpy as np
 from PIL import Image
 
-input_dat = './data/v_outdata.dat'
+input_dat = './data/out.gold.dat'
 im = Image.open('./data/input.png')
 width, height = im.size
 output_png = "output.png"
