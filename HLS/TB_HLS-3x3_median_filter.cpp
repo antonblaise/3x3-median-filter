@@ -75,6 +75,7 @@ int main(){
 
 	for(row = 1; row <= height; row++)
 	{
+#pragma HLS unroll factor 4
 		for(col = 1; col <= width; col++)
 		{
 			// Window = 3x3 matrix, centered at (row,col)
@@ -88,6 +89,7 @@ int main(){
 			window[7] = img_array[(row+1)*N + (col)];
 			window[8] = img_array[(row+1)*N + (col+1)];
 
+#pragma HLS unroll factor 4
 			median_filter(window, median); // DUT
 			//sort window array (pick any sorting algorithm above)
 
