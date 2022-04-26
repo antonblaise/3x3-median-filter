@@ -1,6 +1,5 @@
 
 @echo off
-
 python clear_dat.py
 echo.
 echo                       3x3 Median Filter      
