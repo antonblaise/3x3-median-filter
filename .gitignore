@@ -71,6 +71,6 @@ HLS/median-filter-3x3/csim/build/obj/.dir
 HLS/.project
 HLS/.cproject
 *.tcl
-*.bat
-HLS/median-filter-3x3/.autopilot/db/dsp_style
-HLS/median-filter-3x3/.autopilot/.autopilot_exit
+HLS/3x3-median-filter/.cproject
+HLS/3x3-median-filter/median_filter
+HLS/3x3-median-filter/.project
