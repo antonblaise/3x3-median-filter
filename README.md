@@ -30,6 +30,7 @@ Assignment 1*</br>
 - The `clear_dat.py` is run at the very beginning to remove all the old `.dat` files to avoid erroneous overlapping.
 - Running `requirements.py` helps to install the packages listed.
 
-# Major amendment on 27 April 2022
+# Major amendments
+### 27 April 2022
 - Switched from static to dynamic memory allocation for the huge matrices and vectors to overcome segmentation fault besides improving processing speed.
 - Eliminated the usage of `fstream` library, as it causes problems during integration with Vivado HLS.
