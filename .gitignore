@@ -24,9 +24,9 @@ HLS/.autopilot/
 HLS/.cproject
 HLS/.project
 HLS/.tcls
-HLS/median_filter/*
-!HLS/median_filter/impl/
-!HLS/median_filter/syn/
+HLS/bubbleSort/*
+!HLS/bubbleSort/impl/
+!HLS/bubbleSort/syn/
 
 # Prerequisites
 *.d
