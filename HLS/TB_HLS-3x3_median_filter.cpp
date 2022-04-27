@@ -11,7 +11,7 @@ void median_filter(int window[9], int &median);
 
 int main(){
 
-#pragma HLS dataflow
+#pragma HLS pipeline II=1 enable_flush rewind
 
 	cout << ">> Reading data..." << endl;
 	FILE *fin, *fdim, *fout, *fout_m;
@@ -31,9 +31,9 @@ int main(){
 	int *vec = (int*) malloc(width*height * sizeof(int)); // Dynamically allocated (width x height) empty matrix space
 
 	fin=fopen("input.dat","r");
+#pragma HLS inline off
 	for (int i = 0; i < width*height; i++) {
-#pragma HLS loop_flatten
-#pragma HLS unroll factor 900
+#pragma HLS unroll
 		fscanf(fin, "%d", &vec[i]);
 	}
 	fclose(fin);
@@ -46,10 +46,12 @@ int main(){
 	cout << ">> Preprocessing data..." << endl;
 
 	// set all elements = 0
+#pragma HLS inline off
 	for (row = 0; row < N; row++){
-#pragma HLS loop_flatten
-#pragma HLS unroll factor 900
+#pragma HLS unroll
 		for (col = 0; col < N; col++){
+#pragma HLS unroll
+
 			img_array[row*N + col] = 0; // equivalent to img_array[row, col]
 		}
 	}
@@ -64,10 +66,12 @@ int main(){
 	// }
 
 	// // No padding
+
+#pragma HLS inline off
 	for (row = 0; row < height; row++){
-#pragma HLS loop_flatten
-#pragma HLS unroll factor 900
+#pragma HLS unroll
 		for (col = 0; col < width; col++){
+#pragma HLS unroll
 			img_array[row*N + col] = vec[pixel_pointer];
 			pixel_pointer++;
 		}
@@ -81,14 +85,13 @@ int main(){
 
 	fout=fopen("out.dat","w");
 
+#pragma HLS inline off
 	for(row = 1; row <= height; row++)
 	{
-#pragma HLS loop_flatten
-#pragma HLS unroll factor 900
+#pragma HLS unroll
 		for(col = 1; col <= width; col++)
 		{
-#pragma HLS loop_flatten
-#pragma HLS unroll factor 900
+#pragma HLS unroll
 			// Window = 3x3 matrix, centered at (row,col)
 			window[0] = img_array[(row-1)*N + (col-1)];
 			window[1] = img_array[(row-1)*N + (col)];

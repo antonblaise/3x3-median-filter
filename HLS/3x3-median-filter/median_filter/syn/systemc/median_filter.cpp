@@ -14,35 +14,113 @@ namespace ap_rtl {
 
 const sc_logic median_filter::ap_const_logic_1 = sc_dt::Log_1;
 const sc_logic median_filter::ap_const_logic_0 = sc_dt::Log_0;
-const sc_lv<4> median_filter::ap_ST_fsm_state1 = "1";
-const sc_lv<4> median_filter::ap_ST_fsm_state2 = "10";
-const sc_lv<4> median_filter::ap_ST_fsm_state3 = "100";
-const sc_lv<4> median_filter::ap_ST_fsm_state4 = "1000";
+const sc_lv<43> median_filter::ap_ST_fsm_state1 = "1";
+const sc_lv<43> median_filter::ap_ST_fsm_state2 = "10";
+const sc_lv<43> median_filter::ap_ST_fsm_state3 = "100";
+const sc_lv<43> median_filter::ap_ST_fsm_state4 = "1000";
+const sc_lv<43> median_filter::ap_ST_fsm_state5 = "10000";
+const sc_lv<43> median_filter::ap_ST_fsm_state6 = "100000";
+const sc_lv<43> median_filter::ap_ST_fsm_state7 = "1000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state8 = "10000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state9 = "100000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state10 = "1000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state11 = "10000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state12 = "100000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state13 = "1000000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state14 = "10000000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state15 = "100000000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state16 = "1000000000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state17 = "10000000000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state18 = "100000000000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state19 = "1000000000000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state20 = "10000000000000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state21 = "100000000000000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state22 = "1000000000000000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state23 = "10000000000000000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state24 = "100000000000000000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state25 = "1000000000000000000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state26 = "10000000000000000000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state27 = "100000000000000000000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state28 = "1000000000000000000000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state29 = "10000000000000000000000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state30 = "100000000000000000000000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state31 = "1000000000000000000000000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state32 = "10000000000000000000000000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state33 = "100000000000000000000000000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state34 = "1000000000000000000000000000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state35 = "10000000000000000000000000000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state36 = "100000000000000000000000000000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state37 = "1000000000000000000000000000000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state38 = "10000000000000000000000000000000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state39 = "100000000000000000000000000000000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state40 = "1000000000000000000000000000000000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state41 = "10000000000000000000000000000000000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state42 = "100000000000000000000000000000000000000000";
+const sc_lv<43> median_filter::ap_ST_fsm_state43 = "1000000000000000000000000000000000000000000";
 const sc_lv<32> median_filter::ap_const_lv32_0 = "00000000000000000000000000000000";
-const sc_lv<32> median_filter::ap_const_lv32_2 = "10";
+const sc_lv<32> median_filter::ap_const_lv32_29 = "101001";
 const sc_lv<32> median_filter::ap_const_lv32_1 = "1";
-const sc_lv<64> median_filter::ap_const_lv64_4 = "100";
+const sc_lv<32> median_filter::ap_const_lv32_2 = "10";
 const sc_lv<32> median_filter::ap_const_lv32_3 = "11";
+const sc_lv<32> median_filter::ap_const_lv32_4 = "100";
+const sc_lv<32> median_filter::ap_const_lv32_5 = "101";
+const sc_lv<32> median_filter::ap_const_lv32_6 = "110";
+const sc_lv<32> median_filter::ap_const_lv32_7 = "111";
+const sc_lv<32> median_filter::ap_const_lv32_8 = "1000";
+const sc_lv<32> median_filter::ap_const_lv32_9 = "1001";
+const sc_lv<32> median_filter::ap_const_lv32_A = "1010";
+const sc_lv<32> median_filter::ap_const_lv32_B = "1011";
+const sc_lv<32> median_filter::ap_const_lv32_C = "1100";
+const sc_lv<32> median_filter::ap_const_lv32_D = "1101";
+const sc_lv<32> median_filter::ap_const_lv32_E = "1110";
+const sc_lv<32> median_filter::ap_const_lv32_F = "1111";
+const sc_lv<32> median_filter::ap_const_lv32_10 = "10000";
+const sc_lv<32> median_filter::ap_const_lv32_11 = "10001";
+const sc_lv<32> median_filter::ap_const_lv32_12 = "10010";
+const sc_lv<32> median_filter::ap_const_lv32_13 = "10011";
+const sc_lv<32> median_filter::ap_const_lv32_14 = "10100";
+const sc_lv<32> median_filter::ap_const_lv32_15 = "10101";
+const sc_lv<32> median_filter::ap_const_lv32_16 = "10110";
+const sc_lv<32> median_filter::ap_const_lv32_17 = "10111";
+const sc_lv<32> median_filter::ap_const_lv32_18 = "11000";
+const sc_lv<32> median_filter::ap_const_lv32_19 = "11001";
+const sc_lv<32> median_filter::ap_const_lv32_1A = "11010";
+const sc_lv<32> median_filter::ap_const_lv32_1B = "11011";
+const sc_lv<32> median_filter::ap_const_lv32_1C = "11100";
+const sc_lv<32> median_filter::ap_const_lv32_1D = "11101";
+const sc_lv<32> median_filter::ap_const_lv32_1E = "11110";
+const sc_lv<32> median_filter::ap_const_lv32_1F = "11111";
+const sc_lv<32> median_filter::ap_const_lv32_20 = "100000";
+const sc_lv<32> median_filter::ap_const_lv32_21 = "100001";
+const sc_lv<32> median_filter::ap_const_lv32_22 = "100010";
+const sc_lv<32> median_filter::ap_const_lv32_23 = "100011";
+const sc_lv<32> median_filter::ap_const_lv32_24 = "100100";
+const sc_lv<32> median_filter::ap_const_lv32_25 = "100101";
+const sc_lv<32> median_filter::ap_const_lv32_26 = "100110";
+const sc_lv<32> median_filter::ap_const_lv32_27 = "100111";
+const sc_lv<32> median_filter::ap_const_lv32_28 = "101000";
+const sc_lv<64> median_filter::ap_const_lv64_4 = "100";
+const sc_lv<32> median_filter::ap_const_lv32_2A = "101010";
 const bool median_filter::ap_const_boolean_1 = true;
 
 median_filter::median_filter(sc_module_name name) : sc_module(name), mVcdFile(0) {
-    grp_insertionSort_fu_40 = new insertionSort("grp_insertionSort_fu_40");
-    grp_insertionSort_fu_40->ap_clk(ap_clk);
-    grp_insertionSort_fu_40->ap_rst(ap_rst);
-    grp_insertionSort_fu_40->ap_start(grp_insertionSort_fu_40_ap_start);
-    grp_insertionSort_fu_40->ap_done(grp_insertionSort_fu_40_ap_done);
-    grp_insertionSort_fu_40->ap_idle(grp_insertionSort_fu_40_ap_idle);
-    grp_insertionSort_fu_40->ap_ready(grp_insertionSort_fu_40_ap_ready);
-    grp_insertionSort_fu_40->inputArray_address0(grp_insertionSort_fu_40_inputArray_address0);
-    grp_insertionSort_fu_40->inputArray_ce0(grp_insertionSort_fu_40_inputArray_ce0);
-    grp_insertionSort_fu_40->inputArray_we0(grp_insertionSort_fu_40_inputArray_we0);
-    grp_insertionSort_fu_40->inputArray_d0(grp_insertionSort_fu_40_inputArray_d0);
-    grp_insertionSort_fu_40->inputArray_q0(window_q0);
-    grp_insertionSort_fu_40->inputArray_address1(grp_insertionSort_fu_40_inputArray_address1);
-    grp_insertionSort_fu_40->inputArray_ce1(grp_insertionSort_fu_40_inputArray_ce1);
-    grp_insertionSort_fu_40->inputArray_we1(grp_insertionSort_fu_40_inputArray_we1);
-    grp_insertionSort_fu_40->inputArray_d1(grp_insertionSort_fu_40_inputArray_d1);
-    grp_insertionSort_fu_40->inputArray_q1(window_q1);
+    grp_bubbleSort_fu_50 = new bubbleSort("grp_bubbleSort_fu_50");
+    grp_bubbleSort_fu_50->ap_clk(ap_clk);
+    grp_bubbleSort_fu_50->ap_rst(ap_rst);
+    grp_bubbleSort_fu_50->ap_start(grp_bubbleSort_fu_50_ap_start);
+    grp_bubbleSort_fu_50->ap_done(grp_bubbleSort_fu_50_ap_done);
+    grp_bubbleSort_fu_50->ap_idle(grp_bubbleSort_fu_50_ap_idle);
+    grp_bubbleSort_fu_50->ap_ready(grp_bubbleSort_fu_50_ap_ready);
+    grp_bubbleSort_fu_50->inputArray_address0(grp_bubbleSort_fu_50_inputArray_address0);
+    grp_bubbleSort_fu_50->inputArray_ce0(grp_bubbleSort_fu_50_inputArray_ce0);
+    grp_bubbleSort_fu_50->inputArray_we0(grp_bubbleSort_fu_50_inputArray_we0);
+    grp_bubbleSort_fu_50->inputArray_d0(grp_bubbleSort_fu_50_inputArray_d0);
+    grp_bubbleSort_fu_50->inputArray_q0(window_q0);
+    grp_bubbleSort_fu_50->inputArray_address1(grp_bubbleSort_fu_50_inputArray_address1);
+    grp_bubbleSort_fu_50->inputArray_ce1(grp_bubbleSort_fu_50_inputArray_ce1);
+    grp_bubbleSort_fu_50->inputArray_we1(grp_bubbleSort_fu_50_inputArray_we1);
+    grp_bubbleSort_fu_50->inputArray_d1(grp_bubbleSort_fu_50_inputArray_d1);
+    grp_bubbleSort_fu_50->inputArray_q1(window_q1);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -51,81 +129,516 @@ median_filter::median_filter(sc_module_name name) : sc_module(name), mVcdFile(0)
     SC_METHOD(thread_ap_CS_fsm_state1);
     sensitive << ( ap_CS_fsm );
 
+    SC_METHOD(thread_ap_CS_fsm_state10);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state11);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state12);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state13);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state14);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state15);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state16);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state17);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state18);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state19);
+    sensitive << ( ap_CS_fsm );
+
     SC_METHOD(thread_ap_CS_fsm_state2);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state20);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state21);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state22);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state23);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state24);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state25);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state26);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state27);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state28);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state29);
     sensitive << ( ap_CS_fsm );
 
     SC_METHOD(thread_ap_CS_fsm_state3);
     sensitive << ( ap_CS_fsm );
 
+    SC_METHOD(thread_ap_CS_fsm_state30);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state31);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state32);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state33);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state34);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state35);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state36);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state37);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state38);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state39);
+    sensitive << ( ap_CS_fsm );
+
     SC_METHOD(thread_ap_CS_fsm_state4);
     sensitive << ( ap_CS_fsm );
 
+    SC_METHOD(thread_ap_CS_fsm_state40);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state41);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state42);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state43);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state5);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state6);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state7);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state8);
+    sensitive << ( ap_CS_fsm );
+
+    SC_METHOD(thread_ap_CS_fsm_state9);
+    sensitive << ( ap_CS_fsm );
+
     SC_METHOD(thread_ap_done);
-    sensitive << ( ap_CS_fsm_state4 );
+    sensitive << ( ap_CS_fsm_state43 );
 
     SC_METHOD(thread_ap_idle);
     sensitive << ( ap_start );
     sensitive << ( ap_CS_fsm_state1 );
 
     SC_METHOD(thread_ap_ready);
-    sensitive << ( ap_CS_fsm_state4 );
+    sensitive << ( ap_CS_fsm_state43 );
 
-    SC_METHOD(thread_grp_insertionSort_fu_40_ap_start);
-    sensitive << ( grp_insertionSort_fu_40_ap_start_reg );
+    SC_METHOD(thread_grp_bubbleSort_fu_50_ap_start);
+    sensitive << ( ap_start );
+    sensitive << ( ap_CS_fsm_state1 );
 
     SC_METHOD(thread_median);
     sensitive << ( window_q0 );
-    sensitive << ( ap_CS_fsm_state4 );
+    sensitive << ( ap_CS_fsm_state43 );
 
     SC_METHOD(thread_median_ap_vld);
-    sensitive << ( ap_CS_fsm_state4 );
+    sensitive << ( ap_CS_fsm_state43 );
 
     SC_METHOD(thread_window_address0);
-    sensitive << ( ap_CS_fsm_state3 );
-    sensitive << ( grp_insertionSort_fu_40_inputArray_address0 );
+    sensitive << ( ap_CS_fsm_state1 );
+    sensitive << ( ap_CS_fsm_state42 );
+    sensitive << ( grp_bubbleSort_fu_50_inputArray_address0 );
     sensitive << ( ap_CS_fsm_state2 );
+    sensitive << ( ap_CS_fsm_state3 );
+    sensitive << ( ap_CS_fsm_state4 );
+    sensitive << ( ap_CS_fsm_state5 );
+    sensitive << ( ap_CS_fsm_state6 );
+    sensitive << ( ap_CS_fsm_state7 );
+    sensitive << ( ap_CS_fsm_state8 );
+    sensitive << ( ap_CS_fsm_state9 );
+    sensitive << ( ap_CS_fsm_state10 );
+    sensitive << ( ap_CS_fsm_state11 );
+    sensitive << ( ap_CS_fsm_state12 );
+    sensitive << ( ap_CS_fsm_state13 );
+    sensitive << ( ap_CS_fsm_state14 );
+    sensitive << ( ap_CS_fsm_state15 );
+    sensitive << ( ap_CS_fsm_state16 );
+    sensitive << ( ap_CS_fsm_state17 );
+    sensitive << ( ap_CS_fsm_state18 );
+    sensitive << ( ap_CS_fsm_state19 );
+    sensitive << ( ap_CS_fsm_state20 );
+    sensitive << ( ap_CS_fsm_state21 );
+    sensitive << ( ap_CS_fsm_state22 );
+    sensitive << ( ap_CS_fsm_state23 );
+    sensitive << ( ap_CS_fsm_state24 );
+    sensitive << ( ap_CS_fsm_state25 );
+    sensitive << ( ap_CS_fsm_state26 );
+    sensitive << ( ap_CS_fsm_state27 );
+    sensitive << ( ap_CS_fsm_state28 );
+    sensitive << ( ap_CS_fsm_state29 );
+    sensitive << ( ap_CS_fsm_state30 );
+    sensitive << ( ap_CS_fsm_state31 );
+    sensitive << ( ap_CS_fsm_state32 );
+    sensitive << ( ap_CS_fsm_state33 );
+    sensitive << ( ap_CS_fsm_state34 );
+    sensitive << ( ap_CS_fsm_state35 );
+    sensitive << ( ap_CS_fsm_state36 );
+    sensitive << ( ap_CS_fsm_state37 );
+    sensitive << ( ap_CS_fsm_state38 );
+    sensitive << ( ap_CS_fsm_state39 );
+    sensitive << ( ap_CS_fsm_state40 );
+    sensitive << ( ap_CS_fsm_state41 );
 
     SC_METHOD(thread_window_address1);
-    sensitive << ( grp_insertionSort_fu_40_inputArray_address1 );
+    sensitive << ( ap_CS_fsm_state1 );
+    sensitive << ( grp_bubbleSort_fu_50_inputArray_address1 );
     sensitive << ( ap_CS_fsm_state2 );
+    sensitive << ( ap_CS_fsm_state3 );
+    sensitive << ( ap_CS_fsm_state4 );
+    sensitive << ( ap_CS_fsm_state5 );
+    sensitive << ( ap_CS_fsm_state6 );
+    sensitive << ( ap_CS_fsm_state7 );
+    sensitive << ( ap_CS_fsm_state8 );
+    sensitive << ( ap_CS_fsm_state9 );
+    sensitive << ( ap_CS_fsm_state10 );
+    sensitive << ( ap_CS_fsm_state11 );
+    sensitive << ( ap_CS_fsm_state12 );
+    sensitive << ( ap_CS_fsm_state13 );
+    sensitive << ( ap_CS_fsm_state14 );
+    sensitive << ( ap_CS_fsm_state15 );
+    sensitive << ( ap_CS_fsm_state16 );
+    sensitive << ( ap_CS_fsm_state17 );
+    sensitive << ( ap_CS_fsm_state18 );
+    sensitive << ( ap_CS_fsm_state19 );
+    sensitive << ( ap_CS_fsm_state20 );
+    sensitive << ( ap_CS_fsm_state21 );
+    sensitive << ( ap_CS_fsm_state22 );
+    sensitive << ( ap_CS_fsm_state23 );
+    sensitive << ( ap_CS_fsm_state24 );
+    sensitive << ( ap_CS_fsm_state25 );
+    sensitive << ( ap_CS_fsm_state26 );
+    sensitive << ( ap_CS_fsm_state27 );
+    sensitive << ( ap_CS_fsm_state28 );
+    sensitive << ( ap_CS_fsm_state29 );
+    sensitive << ( ap_CS_fsm_state30 );
+    sensitive << ( ap_CS_fsm_state31 );
+    sensitive << ( ap_CS_fsm_state32 );
+    sensitive << ( ap_CS_fsm_state33 );
+    sensitive << ( ap_CS_fsm_state34 );
+    sensitive << ( ap_CS_fsm_state35 );
+    sensitive << ( ap_CS_fsm_state36 );
+    sensitive << ( ap_CS_fsm_state37 );
+    sensitive << ( ap_CS_fsm_state38 );
+    sensitive << ( ap_CS_fsm_state39 );
+    sensitive << ( ap_CS_fsm_state40 );
+    sensitive << ( ap_CS_fsm_state41 );
 
     SC_METHOD(thread_window_ce0);
-    sensitive << ( ap_CS_fsm_state3 );
-    sensitive << ( grp_insertionSort_fu_40_inputArray_ce0 );
+    sensitive << ( ap_CS_fsm_state1 );
+    sensitive << ( ap_CS_fsm_state42 );
+    sensitive << ( grp_bubbleSort_fu_50_inputArray_ce0 );
     sensitive << ( ap_CS_fsm_state2 );
+    sensitive << ( ap_CS_fsm_state3 );
+    sensitive << ( ap_CS_fsm_state4 );
+    sensitive << ( ap_CS_fsm_state5 );
+    sensitive << ( ap_CS_fsm_state6 );
+    sensitive << ( ap_CS_fsm_state7 );
+    sensitive << ( ap_CS_fsm_state8 );
+    sensitive << ( ap_CS_fsm_state9 );
+    sensitive << ( ap_CS_fsm_state10 );
+    sensitive << ( ap_CS_fsm_state11 );
+    sensitive << ( ap_CS_fsm_state12 );
+    sensitive << ( ap_CS_fsm_state13 );
+    sensitive << ( ap_CS_fsm_state14 );
+    sensitive << ( ap_CS_fsm_state15 );
+    sensitive << ( ap_CS_fsm_state16 );
+    sensitive << ( ap_CS_fsm_state17 );
+    sensitive << ( ap_CS_fsm_state18 );
+    sensitive << ( ap_CS_fsm_state19 );
+    sensitive << ( ap_CS_fsm_state20 );
+    sensitive << ( ap_CS_fsm_state21 );
+    sensitive << ( ap_CS_fsm_state22 );
+    sensitive << ( ap_CS_fsm_state23 );
+    sensitive << ( ap_CS_fsm_state24 );
+    sensitive << ( ap_CS_fsm_state25 );
+    sensitive << ( ap_CS_fsm_state26 );
+    sensitive << ( ap_CS_fsm_state27 );
+    sensitive << ( ap_CS_fsm_state28 );
+    sensitive << ( ap_CS_fsm_state29 );
+    sensitive << ( ap_CS_fsm_state30 );
+    sensitive << ( ap_CS_fsm_state31 );
+    sensitive << ( ap_CS_fsm_state32 );
+    sensitive << ( ap_CS_fsm_state33 );
+    sensitive << ( ap_CS_fsm_state34 );
+    sensitive << ( ap_CS_fsm_state35 );
+    sensitive << ( ap_CS_fsm_state36 );
+    sensitive << ( ap_CS_fsm_state37 );
+    sensitive << ( ap_CS_fsm_state38 );
+    sensitive << ( ap_CS_fsm_state39 );
+    sensitive << ( ap_CS_fsm_state40 );
+    sensitive << ( ap_CS_fsm_state41 );
 
     SC_METHOD(thread_window_ce1);
-    sensitive << ( grp_insertionSort_fu_40_inputArray_ce1 );
+    sensitive << ( ap_CS_fsm_state1 );
+    sensitive << ( grp_bubbleSort_fu_50_inputArray_ce1 );
     sensitive << ( ap_CS_fsm_state2 );
+    sensitive << ( ap_CS_fsm_state3 );
+    sensitive << ( ap_CS_fsm_state4 );
+    sensitive << ( ap_CS_fsm_state5 );
+    sensitive << ( ap_CS_fsm_state6 );
+    sensitive << ( ap_CS_fsm_state7 );
+    sensitive << ( ap_CS_fsm_state8 );
+    sensitive << ( ap_CS_fsm_state9 );
+    sensitive << ( ap_CS_fsm_state10 );
+    sensitive << ( ap_CS_fsm_state11 );
+    sensitive << ( ap_CS_fsm_state12 );
+    sensitive << ( ap_CS_fsm_state13 );
+    sensitive << ( ap_CS_fsm_state14 );
+    sensitive << ( ap_CS_fsm_state15 );
+    sensitive << ( ap_CS_fsm_state16 );
+    sensitive << ( ap_CS_fsm_state17 );
+    sensitive << ( ap_CS_fsm_state18 );
+    sensitive << ( ap_CS_fsm_state19 );
+    sensitive << ( ap_CS_fsm_state20 );
+    sensitive << ( ap_CS_fsm_state21 );
+    sensitive << ( ap_CS_fsm_state22 );
+    sensitive << ( ap_CS_fsm_state23 );
+    sensitive << ( ap_CS_fsm_state24 );
+    sensitive << ( ap_CS_fsm_state25 );
+    sensitive << ( ap_CS_fsm_state26 );
+    sensitive << ( ap_CS_fsm_state27 );
+    sensitive << ( ap_CS_fsm_state28 );
+    sensitive << ( ap_CS_fsm_state29 );
+    sensitive << ( ap_CS_fsm_state30 );
+    sensitive << ( ap_CS_fsm_state31 );
+    sensitive << ( ap_CS_fsm_state32 );
+    sensitive << ( ap_CS_fsm_state33 );
+    sensitive << ( ap_CS_fsm_state34 );
+    sensitive << ( ap_CS_fsm_state35 );
+    sensitive << ( ap_CS_fsm_state36 );
+    sensitive << ( ap_CS_fsm_state37 );
+    sensitive << ( ap_CS_fsm_state38 );
+    sensitive << ( ap_CS_fsm_state39 );
+    sensitive << ( ap_CS_fsm_state40 );
+    sensitive << ( ap_CS_fsm_state41 );
 
     SC_METHOD(thread_window_d0);
-    sensitive << ( grp_insertionSort_fu_40_inputArray_d0 );
+    sensitive << ( ap_CS_fsm_state1 );
+    sensitive << ( grp_bubbleSort_fu_50_inputArray_d0 );
     sensitive << ( ap_CS_fsm_state2 );
+    sensitive << ( ap_CS_fsm_state3 );
+    sensitive << ( ap_CS_fsm_state4 );
+    sensitive << ( ap_CS_fsm_state5 );
+    sensitive << ( ap_CS_fsm_state6 );
+    sensitive << ( ap_CS_fsm_state7 );
+    sensitive << ( ap_CS_fsm_state8 );
+    sensitive << ( ap_CS_fsm_state9 );
+    sensitive << ( ap_CS_fsm_state10 );
+    sensitive << ( ap_CS_fsm_state11 );
+    sensitive << ( ap_CS_fsm_state12 );
+    sensitive << ( ap_CS_fsm_state13 );
+    sensitive << ( ap_CS_fsm_state14 );
+    sensitive << ( ap_CS_fsm_state15 );
+    sensitive << ( ap_CS_fsm_state16 );
+    sensitive << ( ap_CS_fsm_state17 );
+    sensitive << ( ap_CS_fsm_state18 );
+    sensitive << ( ap_CS_fsm_state19 );
+    sensitive << ( ap_CS_fsm_state20 );
+    sensitive << ( ap_CS_fsm_state21 );
+    sensitive << ( ap_CS_fsm_state22 );
+    sensitive << ( ap_CS_fsm_state23 );
+    sensitive << ( ap_CS_fsm_state24 );
+    sensitive << ( ap_CS_fsm_state25 );
+    sensitive << ( ap_CS_fsm_state26 );
+    sensitive << ( ap_CS_fsm_state27 );
+    sensitive << ( ap_CS_fsm_state28 );
+    sensitive << ( ap_CS_fsm_state29 );
+    sensitive << ( ap_CS_fsm_state30 );
+    sensitive << ( ap_CS_fsm_state31 );
+    sensitive << ( ap_CS_fsm_state32 );
+    sensitive << ( ap_CS_fsm_state33 );
+    sensitive << ( ap_CS_fsm_state34 );
+    sensitive << ( ap_CS_fsm_state35 );
+    sensitive << ( ap_CS_fsm_state36 );
+    sensitive << ( ap_CS_fsm_state37 );
+    sensitive << ( ap_CS_fsm_state38 );
+    sensitive << ( ap_CS_fsm_state39 );
+    sensitive << ( ap_CS_fsm_state40 );
+    sensitive << ( ap_CS_fsm_state41 );
 
     SC_METHOD(thread_window_d1);
-    sensitive << ( grp_insertionSort_fu_40_inputArray_d1 );
+    sensitive << ( ap_CS_fsm_state1 );
+    sensitive << ( grp_bubbleSort_fu_50_inputArray_d1 );
     sensitive << ( ap_CS_fsm_state2 );
+    sensitive << ( ap_CS_fsm_state3 );
+    sensitive << ( ap_CS_fsm_state4 );
+    sensitive << ( ap_CS_fsm_state5 );
+    sensitive << ( ap_CS_fsm_state6 );
+    sensitive << ( ap_CS_fsm_state7 );
+    sensitive << ( ap_CS_fsm_state8 );
+    sensitive << ( ap_CS_fsm_state9 );
+    sensitive << ( ap_CS_fsm_state10 );
+    sensitive << ( ap_CS_fsm_state11 );
+    sensitive << ( ap_CS_fsm_state12 );
+    sensitive << ( ap_CS_fsm_state13 );
+    sensitive << ( ap_CS_fsm_state14 );
+    sensitive << ( ap_CS_fsm_state15 );
+    sensitive << ( ap_CS_fsm_state16 );
+    sensitive << ( ap_CS_fsm_state17 );
+    sensitive << ( ap_CS_fsm_state18 );
+    sensitive << ( ap_CS_fsm_state19 );
+    sensitive << ( ap_CS_fsm_state20 );
+    sensitive << ( ap_CS_fsm_state21 );
+    sensitive << ( ap_CS_fsm_state22 );
+    sensitive << ( ap_CS_fsm_state23 );
+    sensitive << ( ap_CS_fsm_state24 );
+    sensitive << ( ap_CS_fsm_state25 );
+    sensitive << ( ap_CS_fsm_state26 );
+    sensitive << ( ap_CS_fsm_state27 );
+    sensitive << ( ap_CS_fsm_state28 );
+    sensitive << ( ap_CS_fsm_state29 );
+    sensitive << ( ap_CS_fsm_state30 );
+    sensitive << ( ap_CS_fsm_state31 );
+    sensitive << ( ap_CS_fsm_state32 );
+    sensitive << ( ap_CS_fsm_state33 );
+    sensitive << ( ap_CS_fsm_state34 );
+    sensitive << ( ap_CS_fsm_state35 );
+    sensitive << ( ap_CS_fsm_state36 );
+    sensitive << ( ap_CS_fsm_state37 );
+    sensitive << ( ap_CS_fsm_state38 );
+    sensitive << ( ap_CS_fsm_state39 );
+    sensitive << ( ap_CS_fsm_state40 );
+    sensitive << ( ap_CS_fsm_state41 );
 
     SC_METHOD(thread_window_we0);
-    sensitive << ( grp_insertionSort_fu_40_inputArray_we0 );
+    sensitive << ( ap_CS_fsm_state1 );
+    sensitive << ( grp_bubbleSort_fu_50_inputArray_we0 );
     sensitive << ( ap_CS_fsm_state2 );
+    sensitive << ( ap_CS_fsm_state3 );
+    sensitive << ( ap_CS_fsm_state4 );
+    sensitive << ( ap_CS_fsm_state5 );
+    sensitive << ( ap_CS_fsm_state6 );
+    sensitive << ( ap_CS_fsm_state7 );
+    sensitive << ( ap_CS_fsm_state8 );
+    sensitive << ( ap_CS_fsm_state9 );
+    sensitive << ( ap_CS_fsm_state10 );
+    sensitive << ( ap_CS_fsm_state11 );
+    sensitive << ( ap_CS_fsm_state12 );
+    sensitive << ( ap_CS_fsm_state13 );
+    sensitive << ( ap_CS_fsm_state14 );
+    sensitive << ( ap_CS_fsm_state15 );
+    sensitive << ( ap_CS_fsm_state16 );
+    sensitive << ( ap_CS_fsm_state17 );
+    sensitive << ( ap_CS_fsm_state18 );
+    sensitive << ( ap_CS_fsm_state19 );
+    sensitive << ( ap_CS_fsm_state20 );
+    sensitive << ( ap_CS_fsm_state21 );
+    sensitive << ( ap_CS_fsm_state22 );
+    sensitive << ( ap_CS_fsm_state23 );
+    sensitive << ( ap_CS_fsm_state24 );
+    sensitive << ( ap_CS_fsm_state25 );
+    sensitive << ( ap_CS_fsm_state26 );
+    sensitive << ( ap_CS_fsm_state27 );
+    sensitive << ( ap_CS_fsm_state28 );
+    sensitive << ( ap_CS_fsm_state29 );
+    sensitive << ( ap_CS_fsm_state30 );
+    sensitive << ( ap_CS_fsm_state31 );
+    sensitive << ( ap_CS_fsm_state32 );
+    sensitive << ( ap_CS_fsm_state33 );
+    sensitive << ( ap_CS_fsm_state34 );
+    sensitive << ( ap_CS_fsm_state35 );
+    sensitive << ( ap_CS_fsm_state36 );
+    sensitive << ( ap_CS_fsm_state37 );
+    sensitive << ( ap_CS_fsm_state38 );
+    sensitive << ( ap_CS_fsm_state39 );
+    sensitive << ( ap_CS_fsm_state40 );
+    sensitive << ( ap_CS_fsm_state41 );
 
     SC_METHOD(thread_window_we1);
-    sensitive << ( grp_insertionSort_fu_40_inputArray_we1 );
+    sensitive << ( ap_CS_fsm_state1 );
+    sensitive << ( grp_bubbleSort_fu_50_inputArray_we1 );
     sensitive << ( ap_CS_fsm_state2 );
+    sensitive << ( ap_CS_fsm_state3 );
+    sensitive << ( ap_CS_fsm_state4 );
+    sensitive << ( ap_CS_fsm_state5 );
+    sensitive << ( ap_CS_fsm_state6 );
+    sensitive << ( ap_CS_fsm_state7 );
+    sensitive << ( ap_CS_fsm_state8 );
+    sensitive << ( ap_CS_fsm_state9 );
+    sensitive << ( ap_CS_fsm_state10 );
+    sensitive << ( ap_CS_fsm_state11 );
+    sensitive << ( ap_CS_fsm_state12 );
+    sensitive << ( ap_CS_fsm_state13 );
+    sensitive << ( ap_CS_fsm_state14 );
+    sensitive << ( ap_CS_fsm_state15 );
+    sensitive << ( ap_CS_fsm_state16 );
+    sensitive << ( ap_CS_fsm_state17 );
+    sensitive << ( ap_CS_fsm_state18 );
+    sensitive << ( ap_CS_fsm_state19 );
+    sensitive << ( ap_CS_fsm_state20 );
+    sensitive << ( ap_CS_fsm_state21 );
+    sensitive << ( ap_CS_fsm_state22 );
+    sensitive << ( ap_CS_fsm_state23 );
+    sensitive << ( ap_CS_fsm_state24 );
+    sensitive << ( ap_CS_fsm_state25 );
+    sensitive << ( ap_CS_fsm_state26 );
+    sensitive << ( ap_CS_fsm_state27 );
+    sensitive << ( ap_CS_fsm_state28 );
+    sensitive << ( ap_CS_fsm_state29 );
+    sensitive << ( ap_CS_fsm_state30 );
+    sensitive << ( ap_CS_fsm_state31 );
+    sensitive << ( ap_CS_fsm_state32 );
+    sensitive << ( ap_CS_fsm_state33 );
+    sensitive << ( ap_CS_fsm_state34 );
+    sensitive << ( ap_CS_fsm_state35 );
+    sensitive << ( ap_CS_fsm_state36 );
+    sensitive << ( ap_CS_fsm_state37 );
+    sensitive << ( ap_CS_fsm_state38 );
+    sensitive << ( ap_CS_fsm_state39 );
+    sensitive << ( ap_CS_fsm_state40 );
+    sensitive << ( ap_CS_fsm_state41 );
 
     SC_METHOD(thread_ap_NS_fsm);
     sensitive << ( ap_start );
     sensitive << ( ap_CS_fsm );
     sensitive << ( ap_CS_fsm_state1 );
-    sensitive << ( grp_insertionSort_fu_40_ap_done );
-    sensitive << ( ap_CS_fsm_state2 );
 
     SC_THREAD(thread_hdltv_gen);
     sensitive << ( ap_clk.pos() );
 
-    ap_CS_fsm = "0001";
-    grp_insertionSort_fu_40_ap_start_reg = SC_LOGIC_0;
+    ap_CS_fsm = "0000000000000000000000000000000000000000001";
     static int apTFileNum = 0;
     stringstream apTFilenSS;
     apTFilenSS << "median_filter_sc_trace_" << apTFileNum ++;
@@ -156,22 +669,60 @@ median_filter::median_filter(sc_module_name name) : sc_module(name), mVcdFile(0)
 #ifdef __HLS_TRACE_LEVEL_INT__
     sc_trace(mVcdFile, ap_CS_fsm, "ap_CS_fsm");
     sc_trace(mVcdFile, ap_CS_fsm_state1, "ap_CS_fsm_state1");
-    sc_trace(mVcdFile, ap_CS_fsm_state3, "ap_CS_fsm_state3");
-    sc_trace(mVcdFile, grp_insertionSort_fu_40_ap_start, "grp_insertionSort_fu_40_ap_start");
-    sc_trace(mVcdFile, grp_insertionSort_fu_40_ap_done, "grp_insertionSort_fu_40_ap_done");
-    sc_trace(mVcdFile, grp_insertionSort_fu_40_ap_idle, "grp_insertionSort_fu_40_ap_idle");
-    sc_trace(mVcdFile, grp_insertionSort_fu_40_ap_ready, "grp_insertionSort_fu_40_ap_ready");
-    sc_trace(mVcdFile, grp_insertionSort_fu_40_inputArray_address0, "grp_insertionSort_fu_40_inputArray_address0");
-    sc_trace(mVcdFile, grp_insertionSort_fu_40_inputArray_ce0, "grp_insertionSort_fu_40_inputArray_ce0");
-    sc_trace(mVcdFile, grp_insertionSort_fu_40_inputArray_we0, "grp_insertionSort_fu_40_inputArray_we0");
-    sc_trace(mVcdFile, grp_insertionSort_fu_40_inputArray_d0, "grp_insertionSort_fu_40_inputArray_d0");
-    sc_trace(mVcdFile, grp_insertionSort_fu_40_inputArray_address1, "grp_insertionSort_fu_40_inputArray_address1");
-    sc_trace(mVcdFile, grp_insertionSort_fu_40_inputArray_ce1, "grp_insertionSort_fu_40_inputArray_ce1");
-    sc_trace(mVcdFile, grp_insertionSort_fu_40_inputArray_we1, "grp_insertionSort_fu_40_inputArray_we1");
-    sc_trace(mVcdFile, grp_insertionSort_fu_40_inputArray_d1, "grp_insertionSort_fu_40_inputArray_d1");
-    sc_trace(mVcdFile, grp_insertionSort_fu_40_ap_start_reg, "grp_insertionSort_fu_40_ap_start_reg");
+    sc_trace(mVcdFile, ap_CS_fsm_state42, "ap_CS_fsm_state42");
+    sc_trace(mVcdFile, grp_bubbleSort_fu_50_ap_start, "grp_bubbleSort_fu_50_ap_start");
+    sc_trace(mVcdFile, grp_bubbleSort_fu_50_ap_done, "grp_bubbleSort_fu_50_ap_done");
+    sc_trace(mVcdFile, grp_bubbleSort_fu_50_ap_idle, "grp_bubbleSort_fu_50_ap_idle");
+    sc_trace(mVcdFile, grp_bubbleSort_fu_50_ap_ready, "grp_bubbleSort_fu_50_ap_ready");
+    sc_trace(mVcdFile, grp_bubbleSort_fu_50_inputArray_address0, "grp_bubbleSort_fu_50_inputArray_address0");
+    sc_trace(mVcdFile, grp_bubbleSort_fu_50_inputArray_ce0, "grp_bubbleSort_fu_50_inputArray_ce0");
+    sc_trace(mVcdFile, grp_bubbleSort_fu_50_inputArray_we0, "grp_bubbleSort_fu_50_inputArray_we0");
+    sc_trace(mVcdFile, grp_bubbleSort_fu_50_inputArray_d0, "grp_bubbleSort_fu_50_inputArray_d0");
+    sc_trace(mVcdFile, grp_bubbleSort_fu_50_inputArray_address1, "grp_bubbleSort_fu_50_inputArray_address1");
+    sc_trace(mVcdFile, grp_bubbleSort_fu_50_inputArray_ce1, "grp_bubbleSort_fu_50_inputArray_ce1");
+    sc_trace(mVcdFile, grp_bubbleSort_fu_50_inputArray_we1, "grp_bubbleSort_fu_50_inputArray_we1");
+    sc_trace(mVcdFile, grp_bubbleSort_fu_50_inputArray_d1, "grp_bubbleSort_fu_50_inputArray_d1");
     sc_trace(mVcdFile, ap_CS_fsm_state2, "ap_CS_fsm_state2");
+    sc_trace(mVcdFile, ap_CS_fsm_state3, "ap_CS_fsm_state3");
     sc_trace(mVcdFile, ap_CS_fsm_state4, "ap_CS_fsm_state4");
+    sc_trace(mVcdFile, ap_CS_fsm_state5, "ap_CS_fsm_state5");
+    sc_trace(mVcdFile, ap_CS_fsm_state6, "ap_CS_fsm_state6");
+    sc_trace(mVcdFile, ap_CS_fsm_state7, "ap_CS_fsm_state7");
+    sc_trace(mVcdFile, ap_CS_fsm_state8, "ap_CS_fsm_state8");
+    sc_trace(mVcdFile, ap_CS_fsm_state9, "ap_CS_fsm_state9");
+    sc_trace(mVcdFile, ap_CS_fsm_state10, "ap_CS_fsm_state10");
+    sc_trace(mVcdFile, ap_CS_fsm_state11, "ap_CS_fsm_state11");
+    sc_trace(mVcdFile, ap_CS_fsm_state12, "ap_CS_fsm_state12");
+    sc_trace(mVcdFile, ap_CS_fsm_state13, "ap_CS_fsm_state13");
+    sc_trace(mVcdFile, ap_CS_fsm_state14, "ap_CS_fsm_state14");
+    sc_trace(mVcdFile, ap_CS_fsm_state15, "ap_CS_fsm_state15");
+    sc_trace(mVcdFile, ap_CS_fsm_state16, "ap_CS_fsm_state16");
+    sc_trace(mVcdFile, ap_CS_fsm_state17, "ap_CS_fsm_state17");
+    sc_trace(mVcdFile, ap_CS_fsm_state18, "ap_CS_fsm_state18");
+    sc_trace(mVcdFile, ap_CS_fsm_state19, "ap_CS_fsm_state19");
+    sc_trace(mVcdFile, ap_CS_fsm_state20, "ap_CS_fsm_state20");
+    sc_trace(mVcdFile, ap_CS_fsm_state21, "ap_CS_fsm_state21");
+    sc_trace(mVcdFile, ap_CS_fsm_state22, "ap_CS_fsm_state22");
+    sc_trace(mVcdFile, ap_CS_fsm_state23, "ap_CS_fsm_state23");
+    sc_trace(mVcdFile, ap_CS_fsm_state24, "ap_CS_fsm_state24");
+    sc_trace(mVcdFile, ap_CS_fsm_state25, "ap_CS_fsm_state25");
+    sc_trace(mVcdFile, ap_CS_fsm_state26, "ap_CS_fsm_state26");
+    sc_trace(mVcdFile, ap_CS_fsm_state27, "ap_CS_fsm_state27");
+    sc_trace(mVcdFile, ap_CS_fsm_state28, "ap_CS_fsm_state28");
+    sc_trace(mVcdFile, ap_CS_fsm_state29, "ap_CS_fsm_state29");
+    sc_trace(mVcdFile, ap_CS_fsm_state30, "ap_CS_fsm_state30");
+    sc_trace(mVcdFile, ap_CS_fsm_state31, "ap_CS_fsm_state31");
+    sc_trace(mVcdFile, ap_CS_fsm_state32, "ap_CS_fsm_state32");
+    sc_trace(mVcdFile, ap_CS_fsm_state33, "ap_CS_fsm_state33");
+    sc_trace(mVcdFile, ap_CS_fsm_state34, "ap_CS_fsm_state34");
+    sc_trace(mVcdFile, ap_CS_fsm_state35, "ap_CS_fsm_state35");
+    sc_trace(mVcdFile, ap_CS_fsm_state36, "ap_CS_fsm_state36");
+    sc_trace(mVcdFile, ap_CS_fsm_state37, "ap_CS_fsm_state37");
+    sc_trace(mVcdFile, ap_CS_fsm_state38, "ap_CS_fsm_state38");
+    sc_trace(mVcdFile, ap_CS_fsm_state39, "ap_CS_fsm_state39");
+    sc_trace(mVcdFile, ap_CS_fsm_state40, "ap_CS_fsm_state40");
+    sc_trace(mVcdFile, ap_CS_fsm_state41, "ap_CS_fsm_state41");
+    sc_trace(mVcdFile, ap_CS_fsm_state43, "ap_CS_fsm_state43");
     sc_trace(mVcdFile, ap_NS_fsm, "ap_NS_fsm");
 #endif
 
@@ -188,7 +739,7 @@ median_filter::~median_filter() {
     mHdltvoutHandle << "] " << endl;
     mHdltvinHandle.close();
     mHdltvoutHandle.close();
-    delete grp_insertionSort_fu_40;
+    delete grp_bubbleSort_fu_50;
 }
 
 void median_filter::thread_ap_clk_no_reset_() {
@@ -197,36 +748,182 @@ void median_filter::thread_ap_clk_no_reset_() {
     } else {
         ap_CS_fsm = ap_NS_fsm.read();
     }
-    if ( ap_rst.read() == ap_const_logic_1) {
-        grp_insertionSort_fu_40_ap_start_reg = ap_const_logic_0;
-    } else {
-        if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && 
-             esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_1))) {
-            grp_insertionSort_fu_40_ap_start_reg = ap_const_logic_1;
-        } else if (esl_seteq<1,1,1>(ap_const_logic_1, grp_insertionSort_fu_40_ap_ready.read())) {
-            grp_insertionSort_fu_40_ap_start_reg = ap_const_logic_0;
-        }
-    }
 }
 
 void median_filter::thread_ap_CS_fsm_state1() {
     ap_CS_fsm_state1 = ap_CS_fsm.read()[0];
 }
 
+void median_filter::thread_ap_CS_fsm_state10() {
+    ap_CS_fsm_state10 = ap_CS_fsm.read()[9];
+}
+
+void median_filter::thread_ap_CS_fsm_state11() {
+    ap_CS_fsm_state11 = ap_CS_fsm.read()[10];
+}
+
+void median_filter::thread_ap_CS_fsm_state12() {
+    ap_CS_fsm_state12 = ap_CS_fsm.read()[11];
+}
+
+void median_filter::thread_ap_CS_fsm_state13() {
+    ap_CS_fsm_state13 = ap_CS_fsm.read()[12];
+}
+
+void median_filter::thread_ap_CS_fsm_state14() {
+    ap_CS_fsm_state14 = ap_CS_fsm.read()[13];
+}
+
+void median_filter::thread_ap_CS_fsm_state15() {
+    ap_CS_fsm_state15 = ap_CS_fsm.read()[14];
+}
+
+void median_filter::thread_ap_CS_fsm_state16() {
+    ap_CS_fsm_state16 = ap_CS_fsm.read()[15];
+}
+
+void median_filter::thread_ap_CS_fsm_state17() {
+    ap_CS_fsm_state17 = ap_CS_fsm.read()[16];
+}
+
+void median_filter::thread_ap_CS_fsm_state18() {
+    ap_CS_fsm_state18 = ap_CS_fsm.read()[17];
+}
+
+void median_filter::thread_ap_CS_fsm_state19() {
+    ap_CS_fsm_state19 = ap_CS_fsm.read()[18];
+}
+
 void median_filter::thread_ap_CS_fsm_state2() {
     ap_CS_fsm_state2 = ap_CS_fsm.read()[1];
+}
+
+void median_filter::thread_ap_CS_fsm_state20() {
+    ap_CS_fsm_state20 = ap_CS_fsm.read()[19];
+}
+
+void median_filter::thread_ap_CS_fsm_state21() {
+    ap_CS_fsm_state21 = ap_CS_fsm.read()[20];
+}
+
+void median_filter::thread_ap_CS_fsm_state22() {
+    ap_CS_fsm_state22 = ap_CS_fsm.read()[21];
+}
+
+void median_filter::thread_ap_CS_fsm_state23() {
+    ap_CS_fsm_state23 = ap_CS_fsm.read()[22];
+}
+
+void median_filter::thread_ap_CS_fsm_state24() {
+    ap_CS_fsm_state24 = ap_CS_fsm.read()[23];
+}
+
+void median_filter::thread_ap_CS_fsm_state25() {
+    ap_CS_fsm_state25 = ap_CS_fsm.read()[24];
+}
+
+void median_filter::thread_ap_CS_fsm_state26() {
+    ap_CS_fsm_state26 = ap_CS_fsm.read()[25];
+}
+
+void median_filter::thread_ap_CS_fsm_state27() {
+    ap_CS_fsm_state27 = ap_CS_fsm.read()[26];
+}
+
+void median_filter::thread_ap_CS_fsm_state28() {
+    ap_CS_fsm_state28 = ap_CS_fsm.read()[27];
+}
+
+void median_filter::thread_ap_CS_fsm_state29() {
+    ap_CS_fsm_state29 = ap_CS_fsm.read()[28];
 }
 
 void median_filter::thread_ap_CS_fsm_state3() {
     ap_CS_fsm_state3 = ap_CS_fsm.read()[2];
 }
 
+void median_filter::thread_ap_CS_fsm_state30() {
+    ap_CS_fsm_state30 = ap_CS_fsm.read()[29];
+}
+
+void median_filter::thread_ap_CS_fsm_state31() {
+    ap_CS_fsm_state31 = ap_CS_fsm.read()[30];
+}
+
+void median_filter::thread_ap_CS_fsm_state32() {
+    ap_CS_fsm_state32 = ap_CS_fsm.read()[31];
+}
+
+void median_filter::thread_ap_CS_fsm_state33() {
+    ap_CS_fsm_state33 = ap_CS_fsm.read()[32];
+}
+
+void median_filter::thread_ap_CS_fsm_state34() {
+    ap_CS_fsm_state34 = ap_CS_fsm.read()[33];
+}
+
+void median_filter::thread_ap_CS_fsm_state35() {
+    ap_CS_fsm_state35 = ap_CS_fsm.read()[34];
+}
+
+void median_filter::thread_ap_CS_fsm_state36() {
+    ap_CS_fsm_state36 = ap_CS_fsm.read()[35];
+}
+
+void median_filter::thread_ap_CS_fsm_state37() {
+    ap_CS_fsm_state37 = ap_CS_fsm.read()[36];
+}
+
+void median_filter::thread_ap_CS_fsm_state38() {
+    ap_CS_fsm_state38 = ap_CS_fsm.read()[37];
+}
+
+void median_filter::thread_ap_CS_fsm_state39() {
+    ap_CS_fsm_state39 = ap_CS_fsm.read()[38];
+}
+
 void median_filter::thread_ap_CS_fsm_state4() {
     ap_CS_fsm_state4 = ap_CS_fsm.read()[3];
 }
 
+void median_filter::thread_ap_CS_fsm_state40() {
+    ap_CS_fsm_state40 = ap_CS_fsm.read()[39];
+}
+
+void median_filter::thread_ap_CS_fsm_state41() {
+    ap_CS_fsm_state41 = ap_CS_fsm.read()[40];
+}
+
+void median_filter::thread_ap_CS_fsm_state42() {
+    ap_CS_fsm_state42 = ap_CS_fsm.read()[41];
+}
+
+void median_filter::thread_ap_CS_fsm_state43() {
+    ap_CS_fsm_state43 = ap_CS_fsm.read()[42];
+}
+
+void median_filter::thread_ap_CS_fsm_state5() {
+    ap_CS_fsm_state5 = ap_CS_fsm.read()[4];
+}
+
+void median_filter::thread_ap_CS_fsm_state6() {
+    ap_CS_fsm_state6 = ap_CS_fsm.read()[5];
+}
+
+void median_filter::thread_ap_CS_fsm_state7() {
+    ap_CS_fsm_state7 = ap_CS_fsm.read()[6];
+}
+
+void median_filter::thread_ap_CS_fsm_state8() {
+    ap_CS_fsm_state8 = ap_CS_fsm.read()[7];
+}
+
+void median_filter::thread_ap_CS_fsm_state9() {
+    ap_CS_fsm_state9 = ap_CS_fsm.read()[8];
+}
+
 void median_filter::thread_ap_done() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state4.read())) {
+    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state43.read())) {
         ap_done = ap_const_logic_1;
     } else {
         ap_done = ap_const_logic_0;
@@ -243,15 +940,20 @@ void median_filter::thread_ap_idle() {
 }
 
 void median_filter::thread_ap_ready() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state4.read())) {
+    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state43.read())) {
         ap_ready = ap_const_logic_1;
     } else {
         ap_ready = ap_const_logic_0;
     }
 }
 
-void median_filter::thread_grp_insertionSort_fu_40_ap_start() {
-    grp_insertionSort_fu_40_ap_start = grp_insertionSort_fu_40_ap_start_reg.read();
+void median_filter::thread_grp_bubbleSort_fu_50_ap_start() {
+    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && 
+         esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_1))) {
+        grp_bubbleSort_fu_50_ap_start = ap_const_logic_1;
+    } else {
+        grp_bubbleSort_fu_50_ap_start = ap_const_logic_0;
+    }
 }
 
 void median_filter::thread_median() {
@@ -259,7 +961,7 @@ void median_filter::thread_median() {
 }
 
 void median_filter::thread_median_ap_vld() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state4.read())) {
+    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state43.read())) {
         median_ap_vld = ap_const_logic_1;
     } else {
         median_ap_vld = ap_const_logic_0;
@@ -267,56 +969,256 @@ void median_filter::thread_median_ap_vld() {
 }
 
 void median_filter::thread_window_address0() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read())) {
+    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state42.read())) {
         window_address0 =  (sc_lv<4>) (ap_const_lv64_4);
-    } else if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read())) {
-        window_address0 = grp_insertionSort_fu_40_inputArray_address0.read();
+    } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state4.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state5.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state6.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state7.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state8.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state9.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state10.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state11.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state12.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state13.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state14.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state15.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state16.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state17.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state18.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state19.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state20.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state21.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state22.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state23.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state24.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state25.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state26.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state27.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state28.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state29.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state30.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state31.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state32.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state33.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state34.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state35.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state36.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state37.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state38.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state39.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state40.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state41.read()))) {
+        window_address0 = grp_bubbleSort_fu_50_inputArray_address0.read();
     } else {
         window_address0 = "XXXX";
     }
 }
 
 void median_filter::thread_window_address1() {
-    window_address1 = grp_insertionSort_fu_40_inputArray_address1.read();
+    window_address1 = grp_bubbleSort_fu_50_inputArray_address1.read();
 }
 
 void median_filter::thread_window_ce0() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read())) {
+    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state42.read())) {
         window_ce0 = ap_const_logic_1;
-    } else if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read())) {
-        window_ce0 = grp_insertionSort_fu_40_inputArray_ce0.read();
+    } else if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state4.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state5.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state6.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state7.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state8.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state9.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state10.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state11.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state12.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state13.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state14.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state15.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state16.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state17.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state18.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state19.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state20.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state21.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state22.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state23.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state24.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state25.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state26.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state27.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state28.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state29.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state30.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state31.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state32.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state33.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state34.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state35.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state36.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state37.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state38.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state39.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state40.read()) || 
+                esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state41.read()))) {
+        window_ce0 = grp_bubbleSort_fu_50_inputArray_ce0.read();
     } else {
         window_ce0 = ap_const_logic_0;
     }
 }
 
 void median_filter::thread_window_ce1() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read())) {
-        window_ce1 = grp_insertionSort_fu_40_inputArray_ce1.read();
+    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state4.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state5.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state6.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state7.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state8.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state9.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state10.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state11.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state12.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state13.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state14.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state15.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state16.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state17.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state18.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state19.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state20.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state21.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state22.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state23.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state24.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state25.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state26.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state27.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state28.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state29.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state30.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state31.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state32.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state33.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state34.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state35.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state36.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state37.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state38.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state39.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state40.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state41.read()))) {
+        window_ce1 = grp_bubbleSort_fu_50_inputArray_ce1.read();
     } else {
         window_ce1 = ap_const_logic_0;
     }
 }
 
 void median_filter::thread_window_d0() {
-    window_d0 = grp_insertionSort_fu_40_inputArray_d0.read();
+    window_d0 = grp_bubbleSort_fu_50_inputArray_d0.read();
 }
 
 void median_filter::thread_window_d1() {
-    window_d1 = grp_insertionSort_fu_40_inputArray_d1.read();
+    window_d1 = grp_bubbleSort_fu_50_inputArray_d1.read();
 }
 
 void median_filter::thread_window_we0() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read())) {
-        window_we0 = grp_insertionSort_fu_40_inputArray_we0.read();
+    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state4.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state5.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state6.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state7.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state8.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state9.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state10.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state11.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state12.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state13.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state14.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state15.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state16.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state17.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state18.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state19.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state20.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state21.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state22.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state23.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state24.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state25.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state26.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state27.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state28.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state29.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state30.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state31.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state32.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state33.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state34.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state35.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state36.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state37.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state38.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state39.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state40.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state41.read()))) {
+        window_we0 = grp_bubbleSort_fu_50_inputArray_we0.read();
     } else {
         window_we0 = ap_const_logic_0;
     }
 }
 
 void median_filter::thread_window_we1() {
-    if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read())) {
-        window_we1 = grp_insertionSort_fu_40_inputArray_we1.read();
+    if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state3.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state4.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state5.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state6.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state7.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state8.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state9.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state10.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state11.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state12.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state13.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state14.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state15.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state16.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state17.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state18.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state19.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state20.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state21.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state22.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state23.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state24.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state25.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state26.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state27.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state28.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state29.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state30.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state31.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state32.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state33.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state34.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state35.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state36.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state37.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state38.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state39.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state40.read()) || 
+         esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state41.read()))) {
+        window_we1 = grp_bubbleSort_fu_50_inputArray_we1.read();
     } else {
         window_we1 = ap_const_logic_0;
     }
@@ -332,20 +1234,133 @@ void median_filter::thread_ap_NS_fsm() {
             }
             break;
         case 2 : 
-            if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read()) && esl_seteq<1,1,1>(grp_insertionSort_fu_40_ap_done.read(), ap_const_logic_1))) {
-                ap_NS_fsm = ap_ST_fsm_state3;
-            } else {
-                ap_NS_fsm = ap_ST_fsm_state2;
-            }
+            ap_NS_fsm = ap_ST_fsm_state3;
             break;
         case 4 : 
             ap_NS_fsm = ap_ST_fsm_state4;
             break;
         case 8 : 
+            ap_NS_fsm = ap_ST_fsm_state5;
+            break;
+        case 16 : 
+            ap_NS_fsm = ap_ST_fsm_state6;
+            break;
+        case 32 : 
+            ap_NS_fsm = ap_ST_fsm_state7;
+            break;
+        case 64 : 
+            ap_NS_fsm = ap_ST_fsm_state8;
+            break;
+        case 128 : 
+            ap_NS_fsm = ap_ST_fsm_state9;
+            break;
+        case 256 : 
+            ap_NS_fsm = ap_ST_fsm_state10;
+            break;
+        case 512 : 
+            ap_NS_fsm = ap_ST_fsm_state11;
+            break;
+        case 1024 : 
+            ap_NS_fsm = ap_ST_fsm_state12;
+            break;
+        case 2048 : 
+            ap_NS_fsm = ap_ST_fsm_state13;
+            break;
+        case 4096 : 
+            ap_NS_fsm = ap_ST_fsm_state14;
+            break;
+        case 8192 : 
+            ap_NS_fsm = ap_ST_fsm_state15;
+            break;
+        case 16384 : 
+            ap_NS_fsm = ap_ST_fsm_state16;
+            break;
+        case 32768 : 
+            ap_NS_fsm = ap_ST_fsm_state17;
+            break;
+        case 65536 : 
+            ap_NS_fsm = ap_ST_fsm_state18;
+            break;
+        case 131072 : 
+            ap_NS_fsm = ap_ST_fsm_state19;
+            break;
+        case 262144 : 
+            ap_NS_fsm = ap_ST_fsm_state20;
+            break;
+        case 524288 : 
+            ap_NS_fsm = ap_ST_fsm_state21;
+            break;
+        case 1048576 : 
+            ap_NS_fsm = ap_ST_fsm_state22;
+            break;
+        case 2097152 : 
+            ap_NS_fsm = ap_ST_fsm_state23;
+            break;
+        case 4194304 : 
+            ap_NS_fsm = ap_ST_fsm_state24;
+            break;
+        case 8388608 : 
+            ap_NS_fsm = ap_ST_fsm_state25;
+            break;
+        case 16777216 : 
+            ap_NS_fsm = ap_ST_fsm_state26;
+            break;
+        case 33554432 : 
+            ap_NS_fsm = ap_ST_fsm_state27;
+            break;
+        case 67108864 : 
+            ap_NS_fsm = ap_ST_fsm_state28;
+            break;
+        case 134217728 : 
+            ap_NS_fsm = ap_ST_fsm_state29;
+            break;
+        case 268435456 : 
+            ap_NS_fsm = ap_ST_fsm_state30;
+            break;
+        case 536870912 : 
+            ap_NS_fsm = ap_ST_fsm_state31;
+            break;
+        case 1073741824 : 
+            ap_NS_fsm = ap_ST_fsm_state32;
+            break;
+        case 2147483648 : 
+            ap_NS_fsm = ap_ST_fsm_state33;
+            break;
+        case 4294967296 : 
+            ap_NS_fsm = ap_ST_fsm_state34;
+            break;
+        case 8589934592 : 
+            ap_NS_fsm = ap_ST_fsm_state35;
+            break;
+        case 17179869184 : 
+            ap_NS_fsm = ap_ST_fsm_state36;
+            break;
+        case 34359738368 : 
+            ap_NS_fsm = ap_ST_fsm_state37;
+            break;
+        case 68719476736 : 
+            ap_NS_fsm = ap_ST_fsm_state38;
+            break;
+        case 137438953472 : 
+            ap_NS_fsm = ap_ST_fsm_state39;
+            break;
+        case 274877906944 : 
+            ap_NS_fsm = ap_ST_fsm_state40;
+            break;
+        case 549755813888 : 
+            ap_NS_fsm = ap_ST_fsm_state41;
+            break;
+        case 1099511627776 : 
+            ap_NS_fsm = ap_ST_fsm_state42;
+            break;
+        case 2199023255552 : 
+            ap_NS_fsm = ap_ST_fsm_state43;
+            break;
+        case 4398046511104 : 
             ap_NS_fsm = ap_ST_fsm_state1;
             break;
         default : 
-            ap_NS_fsm = "XXXX";
+            ap_NS_fsm =  (sc_lv<43>) ("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
             break;
     }
 }
