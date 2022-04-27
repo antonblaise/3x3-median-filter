@@ -20,13 +20,13 @@ HLS/.project
 HLS/.cproject
 *.tcl
 *.funcunit
-HLS/3x3-median-filter/.autopilot/
-HLS/3x3-median-filter/.cproject
-HLS/3x3-median-filter/.project
-HLS/3x3-median-filter/.tcls
-HLS/3x3-median-filter/median_filter/*
-!HLS/3x3-median-filter/median_filter/impl/
-!HLS/3x3-median-filter/median_filter/syn/
+HLS/.autopilot/
+HLS/.cproject
+HLS/.project
+HLS/.tcls
+HLS/median_filter/*
+!HLS/median_filter/impl/
+!HLS/median_filter/syn/
 
 # Prerequisites
 *.d
