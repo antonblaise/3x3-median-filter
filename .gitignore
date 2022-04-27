@@ -27,6 +27,12 @@ HLS/.tcls
 HLS/bubbleSort/*
 !HLS/bubbleSort/impl/
 !HLS/bubbleSort/syn/
+HLS/selectionSort/*
+!HLS/selectionSort/impl/
+!HLS/selectionSort/syn/
+HLS/insertionSort/*
+!HLS/insertionSort/impl/
+!HLS/insertionSort/syn/
 
 # Prerequisites
 *.d
