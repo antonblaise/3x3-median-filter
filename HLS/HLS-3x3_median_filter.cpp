@@ -81,8 +81,8 @@ void median_filter(int window[9], int &median){
 
 	//sort window array (pick any sorting algorithm above)
 //	insertionSort(window, 9);
-//	bubbleSort(window, 9);
-	selectionSort(window, 9);
+	bubbleSort(window, 9);
+//	selectionSort(window, 9);
 	median = window[4];
 
 }
