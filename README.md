@@ -26,7 +26,8 @@ Assignment 1*</br>
 </br>Input, grayscaled, and output.
 
 # Code explanation
-- Each program file is run in the correct order, with the help of automation using the `launcher.bat` file. So we don't have to run the files one by one every time. The PDF below shows brief explanations of each of the scripts involved.</br>[3x3 Median Filter.pdf](https://github.com/antonblaise/3x3-median-filter/files/8559231/3x3.Median.Filter.pdf)
+- Each program file is run in the correct order, with the help of automation using the `launcher.bat` file. So we don't have to run the files one by one every time. The PDF below shows brief explanations of each of the scripts involved.</br>[3x3 Median Filter.pdf](https://github.com/antonblaise/3x3-median-filter/files/8692515/3x3.Median.Filter.pdf)
+
 - The `clear_dat.py` is run at the very beginning to remove all the old `.dat` files to avoid erroneous overlapping.
 - Running `requirements.py` helps to install the packages listed.
 
