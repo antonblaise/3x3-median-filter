@@ -1,5 +1,7 @@
 #include <iostream>
+#include <chrono>
 #include <cstdlib>
+#include <cmath>
 
 using namespace std;
 
@@ -38,7 +40,7 @@ void insertionSort (int inputArray[], int arraySize)
 int main(){
     
 	cout << ">> Reading data..." << endl;
-	FILE *fin, *fdim, *fout, *fout_m;
+	FILE *fin, *fdim, *fout, *fout_m, *ftime, *fspeed;
     
 	// store image dimensions as dim
 	int dim[2];
@@ -95,10 +97,14 @@ int main(){
 
 	// int window[9];
     int *window = (int*)malloc(9 * sizeof(int));
+	double t, speed, sum_t=0, sum_speed=0;
+
 	cout << ">> Performing 3x3 median filter, please wait..." << endl;
 
 	fout=fopen("./data/out.gold.dat","w");
     fout_m=fopen("./data/out.m.dat","w");
+	ftime=fopen("./data/time_ns.dat","w");
+	fspeed=fopen("./data/speed_ns.dat","w");
 
 	for(row = 1; row <= height; row++)
 	{
@@ -116,12 +122,23 @@ int main(){
 			window[8] = img_array[(row+1)*N + (col+1)];
 
 			//sort window array (pick any sorting algorithm above)
+			auto start = chrono::steady_clock::now(); // Start timer
 			insertionSort(window, 9);
-			fprintf(fout,"%d\n",window[4]);
-            fprintf(fout_m,"%d\t",window[4]);
+			auto end = chrono::steady_clock::now(); // Stop timer
+			t = chrono::duration_cast<chrono::nanoseconds>(end - start).count(); // get nanoseconds taken
+			sum_t += t; // add to total time taken (still in nanoseconds)
+			speed = std::isfinite(9.0/t) ? 9.0/t : speed; // Speed = (number of pixels in the window / time taken) = pixels per nanosecond
+			sum_speed += speed;
+			fprintf(ftime,"%.0f\n",t); // Write nanoseconds (per window) to time.dat
+			fprintf(fspeed,"%.8f\n",speed); // write speed (pixels per nanosecond) to speed.dat
+			fprintf(fout,"%d\n",window[4]); // Write median into out.gold.dat
+            fprintf(fout_m,"%d\t",window[4]); // Write median into out.m.dat
 		}
         fprintf(fout_m,"\n");
 	}
+
+	double pps = sum_speed*1e9/(width*height); // total speed / total pixels = average pixels per second
+
 	fclose(fout);
     fclose(fout_m);
 
@@ -129,7 +146,11 @@ int main(){
     free(vec);
     free(window);
 
+	cout << ">> Time taken per pixel (nanoseconds) written as /data/time_ns.dat." << endl;
+	cout << ">> Speed per pixel (pixels per nanoseconds) written as /data/speed_ns.dat." << endl;
 	cout << ">> Saved processed output pixels matrix as /data/out.m.dat and flattened as /data/out.gold.dat." << endl;
+	cout << endl << "- - - Time profiling - - -" << endl << ">> Total time taken = " << sum_t*1e-9 << " seconds." << endl;
+	cout << ">> Processing speed = " << pps << " pixels per second." << endl;
     
     return 0;
 }

@@ -19,6 +19,10 @@ g++ 3x3_median_filter.cpp -o 3x3_median_filter.exe
 3x3_median_filter.exe
 del 3x3_median_filter.exe
 echo.
+echo ===================== Plotting speed data =============================
+echo.
+python plot_speed.py
+echo.
 echo ===================== Converting processed data to PNG ================
 echo.
 python dat_to_img.py
@@ -28,7 +32,7 @@ set ENDTIME=%TIME%
 
 rem ******************  END MAIN CODE SECTION
 
-echo ===================== Time profiling ==================================
+echo ===================== Program time ==================================
 echo.
 rem Change formatting for the start and end times
 for /F "tokens=1-4 delims=:.," %%a in ("%STARTTIME%") do (
