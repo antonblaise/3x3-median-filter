@@ -64,8 +64,8 @@ int main(){
 
 	// declare storage to store image data (not working directly on image data in vec, 
 	// allowing the choise of whether to use preprocessing such as padding)
-	int N = 2000;
-    int *img_array = (int *)malloc(N * N * sizeof(int)); // Dynamically allocated (2000x2000) empty matrix space
+	int N = 1e4; // N = 10000
+    int *img_array = (int *)malloc(N * N * sizeof(int)); // Dynamically allocated (N x N) empty matrix space
 
 	cout << ">> Preprocessing data..." << endl;
 
