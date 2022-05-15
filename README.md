@@ -9,6 +9,7 @@ Assignment 1*</br>
  Note that this tool is only useable on Windows, and it can only produce grayscale outputs.
 
 # Requirements
+[C++ compiler](https://sourceforge.net/projects/mingw/) (mingw32-gcc-g++)</br>
 [Python 3](https://www.python.org/downloads/)</br>
 [NumPy](https://numpy.org/install/)</br>
 [Pillow](https://pypi.org/project/Pillow/)</br>
