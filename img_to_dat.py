@@ -25,9 +25,10 @@ pix_val = list(ImageOps.grayscale(im).getdata())
 print(">> Total number of pixels: "+str(len(pix_val)))
 
 # write dat file
-print(">> Dat file written at "+loc+outdat)
+print(">> Writing .dat file...")
 f = open(loc + outdat, 'w')
 write_dat (f, pix_val)
+print(">> Dat file written at "+loc+outdat)
 
 # grayscale input image
 newimage = Image.new('L', (width,height))
