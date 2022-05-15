@@ -13,8 +13,8 @@ speedData = [element * 1000 for element in list(map(float, open('./data/speed_ns
 print(">> Plotting the data...")
 
 plt.figure(figsize=(20,15))
-plt.plot(speedData, color='blue', linewidth=1)
-plt.plot(smooth(speedData, 5000), color='red', linewidth=1)
+# plt.plot(speedData, color='blue', linewidth=1)
+plt.plot(smooth(speedData, int(len(speedData)*0.1)), color='red', linewidth=1) # Smoothing window size = 10% of full data
 plt.legend(['Speed','Smoothed'], loc='upper right')
 # plt.ylim(0, 0.1)
 plt.grid(True)
