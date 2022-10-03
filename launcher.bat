@@ -3,7 +3,7 @@
 
 rem ******************  MAIN CODE SECTION
 set STARTTIME=%TIME%
-python clear_dat.py
+python clear_dat.py && ( ECHO ) || ( goto :END )
 echo.
 echo                            3x3 Median Filter      
 echo                      SKEL4673-01: DSP Architectures      
@@ -11,21 +11,21 @@ echo                                Group 4
 echo.
 echo ===================== Converting image to greyscale ===================
 echo.
-python img_to_dat.py
+python img_to_dat.py && ( ECHO ) || ( goto :END )
 echo.
 echo ===================== Applying filter =================================
 echo.
-g++ 3x3_median_filter.cpp -o 3x3_median_filter.exe 
-3x3_median_filter.exe
-del 3x3_median_filter.exe
+g++ 3x3_median_filter.cpp -o 3x3_median_filter.exe && ( ECHO ) || ( goto :END )
+3x3_median_filter.exe && ( ECHO ) || ( goto :END )
+del 3x3_median_filter.exe && ( ECHO ) || ( goto :END )
 echo.
 echo ===================== Plotting speed data =============================
 echo.
-python plot_speed.py
+python plot_speed.py && ( ECHO ) || ( goto :END )
 echo.
 echo ===================== Converting processed data to PNG ================
 echo.
-python dat_to_img.py
+python dat_to_img.py && ( ECHO ) || ( goto :END )
 echo.
 
 set ENDTIME=%TIME%
@@ -60,5 +60,8 @@ echo Start    : %STARTTIME%
 echo Finish   : %ENDTIME%
 echo          ---------------
 echo Duration : %DURATION% 
+echo.
+
+:END
 echo.
 pause

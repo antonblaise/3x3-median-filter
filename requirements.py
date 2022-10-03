@@ -2,7 +2,8 @@ import os
 
 requirements = [
     "numpy",
-    "Pillow"
+    "Pillow",
+    "matplotlib"
 ]
 
 for package in requirements:

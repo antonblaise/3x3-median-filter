@@ -13,6 +13,7 @@ Assignment 1*</br>
 [Python 3](https://www.python.org/downloads/)</br>
 [NumPy](https://numpy.org/install/)</br>
 [Pillow](https://pypi.org/project/Pillow/)</br>
+[Matplotlib](https://matplotlib.org/stable/users/installing/index.html)</br>
 
 # Usage guide
 - Run the following command in command prompt `cmd.exe` under your desired folder.</br>`git clone https://github.com/antonblaise/3x3-median-filter.git` 
